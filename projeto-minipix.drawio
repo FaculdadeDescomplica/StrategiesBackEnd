@@ -1,0 +1,50 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="28.0.6">
+  <diagram name="Página-1" id="4iU4Qyb5KEnO_kZj7m1H">
+    <mxGraphModel dx="872" dy="511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2MsGO3TslsKYPyUmYsML-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="2MsGO3TslsKYPyUmYsML-1" target="2MsGO3TslsKYPyUmYsML-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;MINIPIX - API DE CONTAS BANCÁRIAS&lt;/span&gt;&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Regras de Negócio&lt;/h1&gt;&lt;div&gt;- Todas as contas possuem saldo e limite diário&lt;/div&gt;&lt;div&gt;- Nome do Titular e CPF são obrigatórios&lt;/div&gt;&lt;div&gt;- Somente usuários AUTENTICADOS podem acessar a API&lt;/div&gt;&lt;div&gt;- Saldo e limite diário devem ser valores positivos&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="450" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Fluxo da Aplicação&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1. Usuário faz login com &lt;b&gt;Auth0&lt;/b&gt;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2. Auth0 retorna um &lt;b&gt;JWT&lt;/b&gt;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;3. Cliente envia requisições com &lt;b&gt;token &lt;/b&gt;no &lt;b&gt;header&lt;/b&gt;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;4. &lt;b&gt;API &lt;/b&gt;valida o token&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;5. &lt;b&gt;Controller &lt;/b&gt;processa e chama o &lt;b&gt;Service&lt;/b&gt;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;6. &lt;b&gt;Service&lt;/b&gt;&amp;nbsp;aplica as regras e chama o &lt;b&gt;Repository.&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="100" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2MsGO3TslsKYPyUmYsML-6" target="2MsGO3TslsKYPyUmYsML-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-6" value="CONTROLLER" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2MsGO3TslsKYPyUmYsML-7" target="2MsGO3TslsKYPyUmYsML-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2MsGO3TslsKYPyUmYsML-7" target="2MsGO3TslsKYPyUmYsML-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-7" value="SERVICE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2MsGO3TslsKYPyUmYsML-8" target="2MsGO3TslsKYPyUmYsML-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="320" />
+              <mxPoint x="400" y="320" />
+              <mxPoint x="400" y="310" />
+              <mxPoint x="340" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-8" value="REPOSITORY" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2MsGO3TslsKYPyUmYsML-13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Modelo de Entidade Relacionamento - Banco de Dados&lt;/h1&gt;&lt;p&gt;- CONTAS&lt;/p&gt;&lt;p&gt;- CHAVES_PIX&lt;/p&gt;&lt;p&gt;- FAVORECIDOS&lt;/p&gt;&lt;p&gt;- TRANSFERENCIAS_PIX&lt;/p&gt;&lt;p&gt;- COMPROVANTES&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="700" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

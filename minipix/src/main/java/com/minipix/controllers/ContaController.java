@@ -1,6 +1,5 @@
 package com.minipix.controllers;
 
-
 import com.minipix.models.Conta;
 import com.minipix.services.ContaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ public class ContaController {
     private ContaService contaService;
 
     @GetMapping("/sample")
-    public Conta getContaSample(){
+    public Conta getContaSample() {
         return contaService.getContaSample();
     }
 

@@ -1,6 +1,7 @@
 package com.minipix.services;
 
 import com.minipix.models.Conta;
+import com.minipix.repositories.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -15,7 +15,7 @@ public class ContaService {
     @Autowired
     private ContaRepository contaRepository;
 
-    public Conta getContaSample() {
+    public Conta getContaSample(){
 
         Conta conta = new Conta();
 
@@ -30,7 +30,7 @@ public class ContaService {
         conta.setDataCadastro(LocalDate.now());
 
         return conta;
-
+        
     }
 
     public Conta criarConta(Conta conta) {

@@ -60,13 +60,6 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- Spring Data JPA -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-			<scope>compile</scope>
-		</dependency>
-
 		<!-- Swagger UI -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
@@ -97,16 +90,56 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!--  Spring Security  -->
+
+		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
+			<artifactId>
+				spring-boot-starter-security
+			</artifactId>
 		</dependency>
 
-		<!--  OAuth2 Resource Server  -->
+		<!-- OAuth2 Resource Server -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+			<artifactId>
+				spring-boot-starter-oauth2-resource-server
+			</artifactId>
+		</dependency>
+
+		<!-- Testar JWT e segurança -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Testar subida do projeto -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Usar banco de dados local -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Testar conexão do banco -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

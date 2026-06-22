@@ -14,7 +14,7 @@ public class ContaService {
 
     @Autowired
     private ContaRepository contaRepository;
-
+/*
     public Conta getContaSample(){
 
         Conta conta = new Conta();
@@ -31,7 +31,7 @@ public class ContaService {
 
         return conta;
         
-    }
+    }*/
 
     public Conta criarConta(Conta conta) {
 

@@ -22,11 +22,12 @@ public class ContaController {
     @Autowired
     private ContaService contaService;
 
-    @GetMapping("/sample")
+    // apagar
+/*    @GetMapping("/sample")
     public Conta getContaSample(){
         return contaService.getContaSample();
     }
-
+*/
     @PostMapping
     @Operation(summary = "Criar conta",
             description = "Cria uma nova conta bancária")

@@ -28,7 +28,7 @@ public class Conta {
     @Schema(description = "ID da conta", example = "1")
     private Long id;
 
-    @Schema(description = "Nome do titular", example = "Ana Teixeira")
+    @Schema(description = "Nome do titular", example = "Maria Silva")
     @Column(name = "nome_titular")
     private String nomeTitular;
 
@@ -42,8 +42,12 @@ public class Conta {
     private String agencia;
 
     @Schema(description = "Número da conta", example = "12345-6")
-    @Column(name = "numero_conta")
+    @Column(name = "numero_conta", unique = true, nullable = false)
     private String numeroConta;
+
+    @Schema(description = "Senha da conta", example = "12345")
+    @Column(nullable = false)
+    private String senha;
 
     @Schema(description = "Saldo da conta", example = "1500.50")
     private BigDecimal saldo;
@@ -102,6 +106,14 @@ public class Conta {
 
     public void setNumeroConta(String numeroConta) {
         this.numeroConta = numeroConta;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public BigDecimal getSaldo() {

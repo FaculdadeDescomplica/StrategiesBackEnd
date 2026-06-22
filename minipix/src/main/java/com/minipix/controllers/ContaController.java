@@ -1,5 +1,6 @@
 package com.minipix.controllers;
 
+
 import com.minipix.models.Conta;
 import com.minipix.services.ContaService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -15,17 +16,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/contas")
-@Tag(name = "Contas", description = "API responsável pelo gerenciamento de contas no projeto MINIPIX")
-/*
- * http://localhost:8080/swagger-ui/index.html
- * */
+@Tag(name = "Contas", description = "API responsável pelo gerenciamento de contas")
 public class ContaController {
 
     @Autowired
     private ContaService contaService;
 
     @GetMapping("/sample")
-    public Conta getContaSample() {
+    public Conta getContaSample(){
         return contaService.getContaSample();
     }
 

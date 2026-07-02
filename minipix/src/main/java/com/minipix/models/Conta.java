@@ -1,11 +1,13 @@
 package com.minipix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,6 +16,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -60,83 +63,18 @@ public class Conta {
     @Column(name = "data_cadastro")
     private LocalDate dataCadastro;
 
-    public Long getId() {
-        return id;
-    }
+    @JsonIgnore
+    @Schema(description = "Lista de chaves Pix da conta")
+    @OneToMany(mappedBy = "conta")
+    private List<ChavePix> chavesPix;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @JsonIgnore
+    @Schema(description = "Transferências realizadas pela conta")
+    @OneToMany(mappedBy = "contaOrigem")
+    private List<TransferenciaPix> transferenciasEnviadas;
 
-    public String getNomeTitular() {
-        return nomeTitular;
-    }
-
-    public void setNomeTitular(String nomeTitular) {
-        this.nomeTitular = nomeTitular;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getBanco() {
-        return banco;
-    }
-
-    public void setBanco(String banco) {
-        this.banco = banco;
-    }
-
-    public String getAgencia() {
-        return agencia;
-    }
-
-    public void setAgencia(String agencia) {
-        this.agencia = agencia;
-    }
-
-    public String getNumeroConta() {
-        return numeroConta;
-    }
-
-    public void setNumeroConta(String numeroConta) {
-        this.numeroConta = numeroConta;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public BigDecimal getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(BigDecimal saldo) {
-        this.saldo = saldo;
-    }
-
-    public BigDecimal getLimiteDiario() {
-        return limiteDiario;
-    }
-
-    public void setLimiteDiario(BigDecimal limiteDiario) {
-        this.limiteDiario = limiteDiario;
-    }
-
-    public LocalDate getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void setDataCadastro(LocalDate dataCadastro) {
-        this.dataCadastro = dataCadastro;
-    }
+    @JsonIgnore
+    @Schema(description = "Favorecidos cadastrados pela conta")
+    @OneToMany(mappedBy = "contaOrigem")
+    private List<Favorecido> favorecidos;
 }

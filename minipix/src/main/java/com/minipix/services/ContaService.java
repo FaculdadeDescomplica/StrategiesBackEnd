@@ -44,4 +44,34 @@ public class ContaService {
         return contaRepository.findAll();
     }
 
+    public Conta buscarPorId(Long id) {
+        return contaRepository.findById(id).orElse(null);
+    }
+
+    public Conta atualizar(Long id, Conta contaAtualizada) {
+
+        Conta conta = buscarPorId(id);
+
+        if (conta == null) {
+            return null;
+        }
+
+        contaAtualizada.setId(id);
+
+        return contaRepository.save(contaAtualizada);
+    }
+
+    public boolean excluir(Long id) {
+
+        Conta conta = buscarPorId(id);
+
+        if (conta == null) {
+            return false;
+        }
+
+        contaRepository.deleteById(id);
+
+        return true;
+    }
+
 }
